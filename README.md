@@ -1,16 +1,18 @@
 # StopCharge
 
 Exact cancel paths for subscriptions that hide the exit.
+Run by **Mbio Team**.
 
-**Live site:** [fevic1.github.io/stopcharge](https://fevic1.github.io/stopcharge/)
+**Live site:** [stopcharge.net](https://stopcharge.net)
 
-Official menu names first. Fight-back tools second. Domain can swap in later; files stay the same.
+Official menu names first. Fight-back tools second.
 
 ## Status
 
 | Item | Value |
 | --- | --- |
-| Host | GitHub Pages · `main` / `/` |
+| Host | GitHub Pages · custom domain `stopcharge.net` |
+| Brand | StopCharge · Mbio Team |
 | Core pages | Amazon Prime · Adobe · Apple · Google Play |
 | Extra | `fight.html` · `templates.html` |
 | Next on queue | LinkedIn Premium |
@@ -22,9 +24,10 @@ Official menu names first. Fight-back tools second. Domain can swap in later; fi
 ```text
 stopcharge/
 ├── index.html
-├── fight.html              # charged-you-anyway hub
-├── templates.html          # refund + dispute letters
+├── fight.html
+├── templates.html
 ├── styles.css
+├── CNAME
 ├── pages/
 ├── outreach/
 └── .github/ISSUE_TEMPLATE/dark-pattern.md
