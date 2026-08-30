@@ -1,13 +1,10 @@
-# Affiliate and referral drafts
+# Affiliate drafts
 
-## Privacy.com / virtual cards
-Status: SENT 2026-08-30 from fevic2@gmail.com → support@privacy.com (cc owner).
-Official apply door: https://privacy.com/affiliate-program
-No tracking link live on the site until they reply with terms + URL.
+Owner personal email is not stored in this file.
 
-Subject: Publisher interest — StopCharge cancel-path directory
+## Privacy.com
+Status: outbound sent 2026-08-30 to support@privacy.com.
+Reply so far: Zendesk auto-ack only. No tracking URL.
+Live page link until they issue an ID: https://privacy.com
 
-Body on file in Gmail Sent.
-
-## Rule
-No PayPal, Stripe, or card numbers in this repo or in chat. Payout details go only on Privacy’s own dashboard after they approve the publisher account.
+When a real publisher URL arrives, replace every `https://privacy.com` href in index.html and pages/.

@@ -35,6 +35,7 @@ li { margin: 8px 0; }
   padding-left: 14px;
   color: var(--ink);
 }
+.backup { border-color: #3a4a38; }
 footer { color: var(--ink); font-size: 13px; padding: 40px 20px 60px; }
 nav a { margin-right: 14px; font-size: 14px; }
 .grid { display: grid; gap: 12px; margin: 28px 0; }
