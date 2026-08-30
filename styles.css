@@ -21,6 +21,7 @@ header { padding-top: 36px; padding-bottom: 8px; }
 .mark { letter-spacing: 0.18em; text-transform: uppercase; font-size: 12px; color: var(--sage); }
 h1 { font-size: 34px; font-weight: 500; line-height: 1.15; margin: 12px 0 8px; }
 h2 { font-size: 20px; font-weight: 500; }
+h3 { font-size: 16px; font-weight: 500; }
 .lede { color: var(--ink); font-size: 18px; }
 .card {
   background: var(--surface);
@@ -100,3 +101,5 @@ textarea.letter {
 }
 .status { font-size: 13px; color: var(--sage); min-height: 1.2em; }
 .check { display: flex; align-items: center; gap: 8px; margin: 10px 0; color: var(--ink); font-size: 14px; }
+details { margin: 10px 0; }
+summary { cursor: pointer; color: var(--sage); }
