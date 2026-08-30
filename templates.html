@@ -3,63 +3,198 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Refund and dispute templates — StopCharge</title>
+  <title>Refund and dispute letters — StopCharge</title>
+  <meta name="description" content="Fill your details, edit the letter, copy it, or open it in your own mailbox. Nothing is sent to us.">
+  <meta name="theme-color" content="#0C0C0B">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicon.svg">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <nav><a href="index.html">← All exits</a> <a href="fight.html">Fight back</a></nav>
-    <div class="mark">StopCharge</div>
-    <h1>Letters you can send today</h1>
-    <p class="lede">Fill the brackets. Attach screenshots. Do not paste account numbers into a public form.</p>
+    <nav><a href="index.html">← All exits</a> <a href="fight.html">Fight back</a> <a href="complain.html">Complain</a></nav>
+    <div class="brandrow">
+      <img class="logo" src="favicon.svg" width="28" height="28" alt="StopCharge">
+      <div class="mark">StopCharge · Mbio Team</div>
+    </div>
+    <h1>Write it once. Send it from your mailbox.</h1>
+    <p class="lede">Fill the boxes. Edit the letter if the tone is off. Copy, or open your own email app. We never see what you type. Attach screenshots there — not here.</p>
   </header>
   <main>
     <section class="card">
-      <h2>1. Refund demand to the company</h2>
-      <p class="meta">Send to the billing / cancellation address they publish. Keep a copy.</p>
-<pre>Subject: Refund request — cancelled [PLAN] — charged [DATE] — [AMOUNT]
-
-I cancelled [PLAN / MERCHANT] on [DATE TIME, timezone] through [web / app / store].
-Confirmation: [email subject or confirmation ID].
-
-You charged [AMOUNT] on [CHARGE DATE] after that cancellation.
-
-Please refund that charge to the original payment method by [DATE + 10 days]
-and confirm in writing that the subscription will not renew.
-
-Attached: screenshot of the active plan, cancellation confirmation, and the charge line.
-
-[NAME]
-[ACCOUNT EMAIL THEY HAVE — not extra personal data]</pre>
+      <h2>Your facts</h2>
+      <p class="meta">Stays in this browser tab. Skip a box if you do not have it.</p>
+      <div class="facts">
+        <label class="field"><span>Company / merchant</span><input id="merchant" type="text" placeholder="Adobe, Amazon Prime, OpenAI…"></label>
+        <label class="field"><span>Plan name</span><input id="plan" type="text" placeholder="Creative Cloud annual, Plus…"></label>
+        <label class="field"><span>Amount charged</span><input id="amount" type="text" placeholder="$14.99"></label>
+        <label class="field"><span>Charge date</span><input id="chargeDate" type="text" placeholder="28 Aug 2026"></label>
+        <label class="field"><span>Day you cancelled</span><input id="cancelDate" type="text" placeholder="20 Aug 2026"></label>
+        <label class="field"><span>How you cancelled</span><input id="how" type="text" placeholder="website / iPhone Settings / Play Store"></label>
+        <label class="field wide"><span>Confirmation you kept</span><input id="confirm" type="text" placeholder="email subject, ticket id, or “screenshot of the done screen”"></label>
+        <label class="field"><span>Your name on the letter</span><input id="name" type="text" placeholder="the name on the account"></label>
+        <label class="field"><span>Email they already have</span><input id="acct" type="text" placeholder="the login email — not a new one"></label>
+        <label class="field"><span>Last 4 of the card (bank letter only)</span><input id="last4" type="text" placeholder="1234" maxlength="4"></label>
+        <label class="field"><span>Refund by (your deadline)</span><input id="deadline" type="text" placeholder="10 Sep 2026"></label>
+        <label class="field wide"><span>Company email to open in your mailbox</span><input id="toCompany" type="email" placeholder="support@…  (you look this up — we do not host inboxes)"></label>
+        <label class="field wide"><span>Bank / card email if you have one</span><input id="toBank" type="email" placeholder="often easier: dispute in the bank app, paste this letter"></label>
+      </div>
+      <label class="check"><input id="maze" type="checkbox"> They hid the cancel button. Add the maze paragraph.</label>
+      <p>
+        <button type="button" class="btn primary" id="rebuild">Fill the letters from these facts</button>
+      </p>
     </section>
+
     <section class="card">
-      <h2>2. Dispute notice to the bank or card issuer</h2>
-      <p class="meta">Use the billing-inquiries address on the statement if you send paper. The in-app dispute is faster; this letter backs it.</p>
-<pre>Subject: Billing dispute — cancelled recurring charge — [AMOUNT] on [DATE]
-
-I dispute the charge of [AMOUNT] on [DATE] to [MERCHANT].
-
-I cancelled the service on [CANCEL DATE]. I was billed after cancellation.
-This is a cancelled recurring transaction / unauthorized renewal.
-
-I already asked the merchant for a refund on [DATE]. They have not refunded.
-
-Please credit the charge and block further billing from this merchant.
-Case attachments: cancellation confirmation, refund demand, statement line.
-
-[NAME]
-[LAST 4 OF CARD ONLY]</pre>
+      <h2>1. Ask the company for the money back</h2>
+      <p class="meta">Human tone. Short. Send from the email on the account. Attach the three screenshots.</p>
+      <label class="field"><span>Subject</span><input id="sub1" type="text"></label>
+      <textarea class="letter" id="body1" spellcheck="true"></textarea>
+      <p>
+        <button type="button" class="btn" data-copy="sub1,body1">Copy letter</button>
+        <button type="button" class="btn primary" data-mail="toCompany,sub1,body1">Open in my mailbox</button>
+      </p>
+      <p class="status" data-for="body1"></p>
     </section>
+
     <section class="card">
-      <h2>3. Dark-pattern note (optional last paragraph)</h2>
-      <p class="meta">Add only if you have screenshots of the maze. Do not write “I will sue.”</p>
-<pre>The cancel control was not on the billing page. I had to pass [N] extra screens
-before “End membership” / “Cancel plan” appeared. Screenshots attached.
-I am also sending this record to [FTC ReportFraud / CFPB / Citizens Advice / OCPB]
-if the refund is not issued by [DATE].</pre>
+      <h2>2. Tell the bank they billed after cancel</h2>
+      <p class="meta">Use the in-app dispute first. This is the text you paste into “what happened.”</p>
+      <label class="field"><span>Subject</span><input id="sub2" type="text"></label>
+      <textarea class="letter" id="body2" spellcheck="true"></textarea>
+      <p>
+        <button type="button" class="btn" data-copy="sub2,body2">Copy letter</button>
+        <button type="button" class="btn primary" data-mail="toBank,sub2,body2">Open in my mailbox</button>
+      </p>
+      <p class="status" data-for="body2"></p>
     </section>
-    <p class="trap">A letter is not a verdict. Adobe annual-paid-monthly fees and used-trial refunds follow the plan you signed. Read the brand page first.</p>
+
+    <section class="card">
+      <h2>3. AI / LLM plan that will not die in the chat</h2>
+      <p class="meta">ChatGPT, Claude, Gemini, Copilot, Cursor, Midjourney. The chat window is usually the wrong door.</p>
+      <label class="field"><span>Subject</span><input id="sub3" type="text"></label>
+      <textarea class="letter" id="body3" spellcheck="true"></textarea>
+      <p>
+        <button type="button" class="btn" data-copy="sub3,body3">Copy letter</button>
+        <button type="button" class="btn primary" data-mail="toCompany,sub3,body3">Open in my mailbox</button>
+      </p>
+      <p class="status" data-for="body3"></p>
+    </section>
+
+    <section class="card backup">
+      <h2>Warn the next person</h2>
+      <p>If cancel was a maze, that report is public on GitHub — same idea as this page, different door. No account numbers.</p>
+      <p>
+        <a class="btn" href="https://github.com/fevic1/stopcharge/issues/new?template=dark-pattern.md">File a cancel maze</a>
+        <a class="btn" href="https://github.com/fevic1/stopcharge/issues/new?template=ai-llm.md">File an AI / LLM bill</a>
+      </p>
+    </section>
+    <p class="trap">We do not send the email for you. Your mail app opens with the letter in it. You pick the To address, attach files, and hit send. A letter is not a verdict.</p>
   </main>
-  <footer>Not legal advice. Last checked 30 Aug 2026.</footer>
+  <footer>
+    <a href="terms.html">Terms</a> · Nothing you type here leaves this tab · Not legal advice
+  </footer>
+  <script>
+  (function () {
+    var $ = function (id) { return document.getElementById(id); };
+    function v(id) {
+      var el = $(id);
+      var s = el ? el.value.trim() : "";
+      return s || "[still blank]";
+    }
+    function mazeBit() {
+      if (!$("maze").checked) return "";
+      return "\n\nOne more thing, because the path out was not obvious. I had to go through extra screens before a real cancel control appeared. I have screenshots of that flow if you need them.";
+    }
+    function build() {
+      var m = v("merchant");
+      var plan = v("plan");
+      var amt = v("amount");
+      var charge = v("chargeDate");
+      var cancel = v("cancelDate");
+      var how = v("how");
+      var conf = v("confirm");
+      var name = v("name");
+      var acct = v("acct");
+      var last4 = v("last4");
+      var by = v("deadline");
+
+      $("sub1").value = "Please refund " + amt + " — I already cancelled " + plan;
+      $("body1").value =
+        "Hello,\n\n" +
+        "I cancelled my " + plan + " with " + m + " on " + cancel + ", through " + how + ". " +
+        "I kept the confirmation (" + conf + ").\n\n" +
+        "You still took " + amt + " on " + charge + ". I am asking you to put that back on the original payment method by " + by + ", and to write back that this plan will not renew.\n\n" +
+        "I can send the cancellation screen and the charge line if your team needs them. Please do not ask me to call a number to finish a cancel I already completed." +
+        mazeBit() +
+        "\n\nThank you,\n" + name + "\n" + acct;
+
+      $("sub2").value = "Dispute — cancelled plan, still charged " + amt + " on " + charge;
+      $("body2").value =
+        "I am disputing a recurring charge.\n\n" +
+        "Merchant: " + m + "\n" +
+        "Amount: " + amt + " on " + charge + "\n" +
+        "Card ending: " + last4 + "\n\n" +
+        "I cancelled the service on " + cancel + ". They billed me after that. I already asked them for a refund. I have the cancel confirmation and the statement line.\n\n" +
+        "Please credit this charge and stop further billing from this merchant.\n\n" +
+        name;
+
+      $("sub3").value = "Cancel and refund — " + plan + " still billing after I left";
+      $("body3").value =
+        "Hello,\n\n" +
+        "I pay for " + plan + " with " + m + ". I cancelled on " + cancel + " through " + how + ". Confirmation: " + conf + ".\n\n" +
+        "The product chat / app is not where the bill lives, which is why I am writing here. You still charged " + amt + " on " + charge + ".\n\n" +
+        "Please end the plan, refund " + amt + " to the original method by " + by + ", and email me that it will not renew.\n\n" +
+        "If Apple or Google is the merchant on the receipt, tell me that in one sentence so I cancel in Settings or Play Store instead of waiting on this ticket." +
+        mazeBit() +
+        "\n\nThank you,\n" + name + "\n" + acct;
+    }
+    function status(id, msg) {
+      var n = document.querySelector('.status[data-for="' + id + '"]');
+      if (n) n.textContent = msg;
+    }
+    function copyPair(subId, bodyId) {
+      var text = $("subId".replace("subId", subId)).value + "\n\n" + $(bodyId).value;
+      text = $(subId).value + "\n\n" + $(bodyId).value;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function () {
+          status(bodyId, "Copied. Paste into mail, chat, or the bank form.");
+        }).catch(function () {
+          status(bodyId, "Select the letter and copy it yourself.");
+        });
+      } else {
+        $(bodyId).select();
+        status(bodyId, "Select the letter and copy it yourself.");
+      }
+    }
+    function openMail(toId, subId, bodyId) {
+      var to = $(toId).value.trim();
+      var sub = $(subId).value;
+      var body = $(bodyId).value;
+      var url = "mailto:" + encodeURIComponent(to) + "?subject=" + encodeURIComponent(sub) + "&body=" + encodeURIComponent(body);
+      if (url.length > 1800) {
+        status(bodyId, "Letter is long for a mail link. Copied instead — paste it in your mailbox.");
+        copyPair(subId, bodyId);
+        return;
+      }
+      window.location.href = url;
+      status(bodyId, to ? "Your mail app should open. Attach screenshots, then send." : "Mail app opening with a blank To. Paste the company address.");
+    }
+    $("rebuild").addEventListener("click", build);
+    document.querySelectorAll("[data-copy]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var p = btn.getAttribute("data-copy").split(",");
+        copyPair(p[0], p[1]);
+      });
+    });
+    document.querySelectorAll("[data-mail]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var p = btn.getAttribute("data-mail").split(",");
+        openMail(p[0], p[1], p[2]);
+      });
+    });
+    build();
+  })();
+  </script>
 </body>
 </html>

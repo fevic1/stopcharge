@@ -46,8 +46,13 @@ li { margin: 8px 0; }
   border: 1px solid #3a4a38;
   border-radius: 8px;
   text-decoration: none;
+  background: transparent;
+  color: var(--sage);
+  font: inherit;
+  cursor: pointer;
 }
 .btn:hover { border-color: var(--sage); }
+.btn.primary { border-color: var(--sage); }
 pre {
   white-space: pre-wrap;
   background: #0f0f0e;
@@ -62,3 +67,36 @@ pre {
 footer { color: var(--ink); font-size: 13px; padding: 40px 20px 60px; }
 nav a { margin-right: 14px; font-size: 14px; }
 .grid { display: grid; gap: 12px; margin: 28px 0; }
+label.field {
+  display: block;
+  margin: 10px 0;
+  font-size: 13px;
+  color: var(--ink);
+}
+label.field span { display: block; margin-bottom: 4px; }
+input[type="text"], input[type="email"], textarea.letter {
+  width: 100%;
+  background: #0f0f0e;
+  color: var(--bone);
+  border: 1px solid #2a2a26;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font: inherit;
+}
+textarea.letter {
+  min-height: 260px;
+  font-size: 16px;
+  line-height: 1.5;
+  resize: vertical;
+}
+.facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 14px;
+}
+.facts .wide { grid-column: 1 / -1; }
+@media (max-width: 560px) {
+  .facts { grid-template-columns: 1fr; }
+}
+.status { font-size: 13px; color: var(--sage); min-height: 1.2em; }
+.check { display: flex; align-items: center; gap: 8px; margin: 10px 0; color: var(--ink); font-size: 14px; }
