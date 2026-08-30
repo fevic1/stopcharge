@@ -1,15 +1,13 @@
-# Affiliate and referral drafts — DO NOT SEND
-
-Fence: Mogul drafts. A human sends.
+# Affiliate and referral drafts
 
 ## Privacy.com / virtual cards
-Subject: StopCharge — cancel-path directory, virtual-card mention
+Status: SENT 2026-08-30 from fevic2@gmail.com → support@privacy.com (cc owner).
+Official apply door: https://privacy.com/affiliate-program
+No tracking link live on the site until they reply with terms + URL.
 
-We publish exact cancel steps for subscriptions people cannot exit. Traffic is how-to-cancel intent.
+Subject: Publisher interest — StopCharge cancel-path directory
 
-We want to mention virtual cards as the backup when a company will not offer a cancel button: issue a card per merchant, freeze it.
+Body on file in Gmail Sent.
 
-If you have a partner program for publishers, send the terms. We will not put a link live until those terms are in writing.
-
-## Status
-2026-08-30 — drafts only. No email sent.
+## Rule
+No PayPal, Stripe, or card numbers in this repo or in chat. Payout details go only on Privacy’s own dashboard after they approve the publisher account.
