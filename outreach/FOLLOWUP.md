@@ -1,13 +1,14 @@
-# Follow-up template — use when Privacy sends a human reply
+# Privacy follow-up
 
-Do not send this until the inbound mail is more than the auto-ack.
+Auto-ack: ignore.
+Human / terms / tracking URL: SEND in-thread from connected Gmail. Notify owner that send succeeded.
 
-Subject: Re: Publisher interest — StopCharge cancel-path directory
+Body that gets sent:
 
 Thanks for the note.
 
-StopCharge will place the link only on the “If they still take the money” box, after the official cancel steps. No reviews farm. No homepage splash.
+StopCharge will place the link only on the “If they still take the money” box, after the official cancel steps. No review farm. No homepage splash.
 
-Please confirm the exact tracking URL to swap in for https://privacy.com.
+Please confirm the exact tracking URL to swap in for https://privacy.com
 
 Site: https://fevic1.github.io/stopcharge/
