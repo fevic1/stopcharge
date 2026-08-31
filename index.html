@@ -57,10 +57,10 @@
       <article class="card">
         <h2><a href="pages/apple-subscriptions.html">Anything billed by Apple</a></h2>
         <p class="meta">The app cannot cancel itself</p>
-        <p class="trap">Before a bank chargeback, try <a href="https://reportaproblem.apple.com" rel="noopener">reportaproblem.apple.com</a>. Apple sometimes issues a one-time courtesy refund. A bank dispute can put the Apple ID at risk.</p>
+        <p class="trap">Before a bank chargeback, try <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>. Apple often grants a one-time courtesy refund. A bank dispute can risk the Apple ID.</p>
         <p>Phone: Settings → your name → Subscriptions.<br>
-        Desktop: <a href="https://apps.apple.com/account/subscriptions" rel="noopener">Apple subscriptions</a>
-        or <a href="https://www.apple.com/billing" rel="noopener">apple.com/billing</a>.</p>
+        Desktop: <a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener">Apple subscriptions</a>
+        or <a href="https://www.apple.com/billing" target="_blank" rel="noopener">apple.com/billing</a>.</p>
       </article>
       <article class="card">
         <h2><a href="pages/google-play-subscriptions.html">Anything billed by Google Play</a></h2>
@@ -76,7 +76,7 @@
 
     <section class="card backup">
       <h2>They charged you anyway</h2>
-      <p>Cancel first. Three screenshots. Then <strong>your own email app</strong> — not a message to us, not a GitHub form.</p>
+      <p>Cancel first. Three screenshots. Then <strong>open your email client</strong> — not a GitHub form, not a message to us.</p>
       <ol>
         <li>The <strong>active plan</strong> screen before you cancel.</li>
         <li>The <strong>cancellation confirmed</strong> screen with date and time.</li>
@@ -84,11 +84,11 @@
       </ol>
       <p class="trap">Act fast: card disputes often die after <strong>120 days</strong>. PayPal often <strong>180</strong> — escalate inside 20 days.</p>
       <p>
-        <a class="btn primary" href="templates.html">Copy letter or open your email app</a>
+        <a class="btn primary" href="templates.html">Copy letter or open your email client</a>
         <a class="btn" href="fight.html">Full fight-back guide</a>
       </p>
       <details>
-        <summary>Copy-paste letter to the company</summary>
+        <summary>Letter to the company</summary>
         <pre>Subject: Refund — I cancelled, you charged me anyway
 
 I cancelled [plan] on [date] through [website / Apple / Play]. I have the confirmation.
@@ -100,7 +100,7 @@ I can send the three screenshots. If this stays unpaid I will dispute the charge
 [Email already on the account]</pre>
       </details>
       <details>
-        <summary>Copy-paste reason for the bank app</summary>
+        <summary>Reason for the bank app</summary>
         <pre>Reason: cancelled recurring charge / services not received after cancel.
 
 I cancelled [merchant / plan] on [cancel date] before this cycle.
@@ -126,13 +126,33 @@ Attached: active-plan screenshot, cancel-confirmed screenshot, confirmation emai
     </section>
     <section class="card">
       <h2>AI / LLM plans</h2>
-      <p>Cancel on the billing page, then use your own email app. <a href="complain.html">Vendor links</a>.</p>
+      <p>Cancel on the billing page, then open your email client. <a href="complain.html">Vendor links</a>.</p>
     </section>
-    <p class="meta">Saw a cancel maze? <a href="https://github.com/fevic1/stopcharge/issues/new?template=dark-pattern.md">Open a GitHub report</a> (public, no card numbers).</p>
+    <p class="meta">Want the maze on the public record?
+      <a href="https://github.com/fevic1/stopcharge/issues/new?template=dark-pattern.md&title=Cancel+maze:+[company]&body=Company:%0AWhere+the+cancel+control+was+hidden:%0AWhat+happened+after+I+tried+to+leave:%0A" target="_blank" rel="noopener">File an optional GitHub report</a>. No card numbers.</p>
   </main>
   <footer>
     <a href="terms.html">Terms</a> · <a href="charges.html">We never bill you</a> · <a href="templates.html">Letters</a> · Not legal advice. Run by Mbio Team.<br>
     Corrections: <a href="https://github.com/fevic1/stopcharge/issues">GitHub issues</a> · this is not a helpdesk.
   </footer>
+  <script>
+  document.querySelectorAll("pre").forEach(function (pre) {
+    pre.style.position = "relative";
+    var button = document.createElement("button");
+    button.type = "button";
+    button.className = "copy-btn";
+    button.textContent = "Copy";
+    button.addEventListener("click", function () {
+      var text = pre.innerText.replace(/\s*Copy\s*$/, "").replace(/\s*Copied\s*$/, "");
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text.trim()).then(function () {
+          button.textContent = "Copied";
+          setTimeout(function () { button.textContent = "Copy"; }, 2000);
+        });
+      }
+    });
+    pre.appendChild(button);
+  });
+  </script>
 </body>
 </html>
