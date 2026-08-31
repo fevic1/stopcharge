@@ -124,12 +124,24 @@ pre {
   border: 1px solid var(--sage);
   border-radius: 999px;
 }
-footer {
+footer, .sitefoot {
   color: var(--ink);
   font-size: 13px;
-  padding: 48px 24px 72px;
+  padding: 40px 24px 72px;
   font-family: ui-sans-serif, system-ui, sans-serif;
+  line-height: 1.6;
 }
+.sitefoot {
+  margin-top: 3rem;
+  border-top: 1px solid var(--line);
+}
+.footnav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin: 0 0 12px;
+}
+.footnav a { color: var(--bone); }
 nav a { margin-right: 14px; font-size: 14px; }
 .grid {
   display: grid;
