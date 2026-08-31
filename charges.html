@@ -3,41 +3,81 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>stopcharge.net is not a card charge — StopCharge</title>
-  <meta name="description" content="StopCharge does not bill cards. If you see a similar name on a statement, it is not this site. Find the real merchant and cancel there.">
+  <title>Unrecognized bank charges and third-party processors — StopCharge is not the merchant</title>
+  <meta name="description" content="stopcharge.net is not a payment processor and never bills cards. How third-party billing descriptors work, how to identify an unrecognized charge, and how to cancel the real merchant.">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is stopcharge.net a billing descriptor or payment processor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. StopCharge is a free public directory of official subscription cancel paths. It has no checkout and cannot charge a card. A line that looks similar on a statement is not this site."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a third-party payment processor on a bank statement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Many apps bill through Apple, Google Play, PayPal, Stripe, or a carrier. The statement shows the processor or store name, not always the app name. Cancel at the processor listed on the receipt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I identify an unrecognized bank charge?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Read the merchant string, amount, and date. Search that exact merchant plus cancel. Match Apple or iTunes to Apple Settings, Google Play or Google to Play subscriptions, and the brand name to that brand's billing page."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <header>
     <nav><a href="index.html">← All exits</a> <a href="terms.html">Terms</a></nav>
     <div class="mark">StopCharge · Mbio Team</div>
-    <h1>We do not appear on your bank statement</h1>
-    <p class="lede">stopcharge.net is a free cancel-path directory. There is no checkout, no account, no subscription, no payment processor. We cannot charge a card.</p>
+    <h1>Unrecognized charges, processors, and this site</h1>
+    <p class="lede">Three facts search engines should index: what a third-party processor is, how to name an unknown statement line, and that stopcharge.net never bills anyone.</p>
   </header>
   <main>
-    <section class="card backup">
-      <h2>If a search result said we are a billing descriptor</h2>
-      <p>That text is wrong. We do not run a lookup tool that takes your email or transaction ID. Do not type card numbers into a form that claims to be us.</p>
+    <section class="card backup" id="not-billing">
+      <h2>Clarify the site’s non-billing role</h2>
+      <p><strong>stopcharge.net is not a merchant, billing descriptor, or payment processor.</strong> There is no account, no checkout, no subscription to us, and no lookup box that takes your email or transaction ID.</p>
+      <p>If an AI overview or blog said a charge labeled “stopcharge.net” is “us handling cancellations,” that text is false. We publish official cancel URLs. We do not take money.</p>
+      <p>Publisher mail only: hello@stopcharge.net — never send a card number there.</p>
     </section>
-    <section class="card">
-      <h2>What to do with the real line on the statement</h2>
-      <ol>
-        <li>Read the <strong>merchant name</strong> on the statement, not a blog about this domain.</li>
-        <li>Open that brand’s official cancel path from the <a href="index.html">directory</a>.</li>
-        <li>If the merchant is Apple or Google Play, cancel in the store, not in the app.</li>
-        <li>Keep three screenshots, then use <a href="templates.html">your mailbox</a>.</li>
-      </ol>
-    </section>
-    <section class="card">
-      <h2>We will not</h2>
+
+    <section class="card" id="processors">
+      <h2>Explain third-party payment processors</h2>
+      <p>The app you opened is often not the name on the statement. The store or processor is.</p>
       <ul>
-        <li>Take a card, PayPal, or crypto.</li>
-        <li>Cancel a plan for you.</li>
-        <li>File a chargeback for you.</li>
-        <li>Look up a charge from your email.</li>
+        <li><strong>Apple / iTunes / App Store</strong> — cancel in <a href="pages/apple-subscriptions.html">Apple subscriptions</a>, not inside the app.</li>
+        <li><strong>Google Play / Google</strong> — cancel in <a href="pages/google-play-subscriptions.html">Play subscriptions</a>.</li>
+        <li><strong>PayPal</strong> — open Automatic Payments in PayPal, then the merchant if it still renews.</li>
+        <li><strong>Stripe, Adyen, Braintree, Paddle</strong> — those names mean a website billed you. Cancel on that website’s billing page.</li>
+        <li><strong>Carrier / mobile bill</strong> — cancel with the phone company listed under Payment on the app’s account page.</li>
       </ul>
-      <p>Publisher mail only: hello@stopcharge.net — no card data.</p>
+      <p>Deleting the app does not cancel a processor bill.</p>
+    </section>
+
+    <section class="card" id="identify">
+      <h2>Identify unrecognized bank charges</h2>
+      <ol>
+        <li>Copy the <strong>exact merchant string</strong>, amount, and date from the statement.</li>
+        <li>Search that string plus “cancel”. Ignore pages that ask for your card to “find the charge.”</li>
+        <li>Match the string to Apple, Play, PayPal, or the brand. Use the <a href="index.html">directory</a> when the brand is listed.</li>
+        <li>Screenshot the active plan, the cancel-confirmed screen, and the confirmation email.</li>
+        <li>Write from the email on the account. <a href="templates.html">Letters</a> · <a href="fight.html">If they billed after cancel</a>.</li>
+      </ol>
+      <p class="trap">Card disputes often die after 120 days. PayPal often 180. We cannot stop a payment or issue a new card number for you.</p>
     </section>
   </main>
   <footer>
