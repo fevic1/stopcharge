@@ -21,7 +21,7 @@ body {
 }
 a { color: var(--sage); text-underline-offset: 3px; }
 a:hover { color: #9bb896; }
-a:focus-visible, .btn:focus-visible, summary:focus-visible {
+a:focus-visible, .btn:focus-visible, summary:focus-visible, .copy-btn:focus-visible {
   outline: 2px solid var(--sage);
   outline-offset: 3px;
 }
@@ -100,15 +100,29 @@ li { margin: 8px 0; }
 .btn:hover { border-color: var(--sage); background: #121510; }
 .btn.primary { background: #1c241b; border-color: var(--sage); color: var(--bone); }
 pre {
+  position: relative;
   white-space: pre-wrap;
   background: #0f0f0e;
   border: 1px solid var(--line);
   border-radius: 8px;
-  padding: 14px;
+  padding: 40px 14px 14px;
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 13px;
   color: var(--bone);
   line-height: 1.45;
+}
+.copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  cursor: pointer;
+  background: #1c241b;
+  color: var(--bone);
+  border: 1px solid var(--sage);
+  border-radius: 999px;
 }
 footer {
   color: var(--ink);
