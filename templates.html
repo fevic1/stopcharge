@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Refund and dispute letters — StopCharge</title>
-  <meta name="description" content="Fill your details, edit the letter, copy it, or open your own email app. Nothing is sent to us.">
+  <meta name="description" content="Fill your details, copy the letter, or open your email client. Nothing is sent to us.">
   <meta name="theme-color" content="#0C0C0B">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
@@ -15,15 +15,15 @@
       <a href="index.html">Exits</a>
       <a href="templates.html">Letters</a>
       <a href="fight.html">Fight back</a>
-      <a href="charges.html">We never bill you</a>
-      <a href="complain.html">Report a maze</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="charges.html">Not a merchant</a>
     </nav>
     <div class="brandrow">
       <img class="logo" src="favicon.svg" width="28" height="28" alt="StopCharge">
       <div class="mark">StopCharge · Mbio Team</div>
     </div>
-    <h1>Write it once. Send it from your email app.</h1>
-    <p class="lede">Fill the boxes. Edit the letter if the tone is off. Copy to clipboard, or open <strong>your</strong> email app. We never see what you type. Attach screenshots there — not here.</p>
+    <h1>Write it once. Send it from your email client.</h1>
+    <p class="lede">Fill the boxes. Copy to clipboard, or open <strong>your</strong> email client. We never see what you type. Attach screenshots there — not here.</p>
   </header>
   <main>
     <section class="card">
@@ -36,62 +36,66 @@
         <label class="field"><span>Charge date</span><input id="chargeDate" type="text" placeholder="28 Aug 2026"></label>
         <label class="field"><span>Day you cancelled</span><input id="cancelDate" type="text" placeholder="20 Aug 2026"></label>
         <label class="field"><span>How you cancelled</span><input id="how" type="text" placeholder="website / iPhone Settings / Play Store"></label>
-        <label class="field wide"><span>Confirmation you kept</span><input id="confirm" type="text" placeholder="email subject, ticket id, or screenshot of the done screen"></label>
+        <label class="field wide"><span>Confirmation you kept</span><input id="confirm" type="text" placeholder="email subject, ticket id, or screenshot"></label>
         <label class="field"><span>Your name on the letter</span><input id="name" type="text" placeholder="the name on the account"></label>
-        <label class="field"><span>Email they already have</span><input id="acct" type="text" placeholder="the login email — not a new one"></label>
+        <label class="field"><span>Email they already have</span><input id="acct" type="text" placeholder="the login email"></label>
         <label class="field"><span>Last 4 of the card (bank letter only)</span><input id="last4" type="text" placeholder="1234" maxlength="4"></label>
-        <label class="field"><span>Refund by (your deadline)</span><input id="deadline" type="text" placeholder="10 Sep 2026"></label>
-        <label class="field wide"><span>Company email for your email app</span><input id="toCompany" type="email" placeholder="support@…  (you look this up — we do not host inboxes)"></label>
-        <label class="field wide"><span>Bank / card email if you have one</span><input id="toBank" type="email" placeholder="often easier: dispute in the bank app, paste this letter"></label>
+        <label class="field"><span>Refund by</span><input id="deadline" type="text" placeholder="10 Sep 2026"></label>
+        <label class="field wide"><span>Company email for your email client</span><input id="toCompany" type="email" placeholder="support@…"></label>
+        <label class="field wide"><span>Bank email if you have one</span><input id="toBank" type="email" placeholder="or paste into the bank app"></label>
       </div>
       <label class="check"><input id="maze" type="checkbox"> They hid the cancel button. Add the maze paragraph.</label>
       <p><button type="button" class="btn primary" id="rebuild">Fill the letters from these facts</button></p>
     </section>
     <section class="card">
       <h2>1. Ask the company for the money back</h2>
-      <p class="meta">Send from the email on the account. Attach the three screenshots. This does not email StopCharge.</p>
+      <p class="meta">This does not email StopCharge.</p>
       <label class="field"><span>Subject</span><input id="sub1" type="text"></label>
       <textarea class="letter" id="body1" spellcheck="true"></textarea>
       <p>
         <button type="button" class="btn" data-copy="sub1,body1">Copy to clipboard</button>
-        <button type="button" class="btn primary" data-mail="toCompany,sub1,body1">Open your email app</button>
+        <button type="button" class="btn primary" data-mail="toCompany,sub1,body1">Open your email client</button>
       </p>
       <p class="status" data-for="body1"></p>
     </section>
     <section class="card">
       <h2>2. Tell the bank they billed after cancel</h2>
-      <p class="meta">Use the in-app dispute first. This is the text you paste into “what happened.”</p>
       <label class="field"><span>Subject</span><input id="sub2" type="text"></label>
       <textarea class="letter" id="body2" spellcheck="true"></textarea>
       <p>
         <button type="button" class="btn" data-copy="sub2,body2">Copy to clipboard</button>
-        <button type="button" class="btn primary" data-mail="toBank,sub2,body2">Open your email app</button>
+        <button type="button" class="btn primary" data-mail="toBank,sub2,body2">Open your email client</button>
       </p>
       <p class="status" data-for="body2"></p>
     </section>
     <section class="card">
-      <h2>3. AI / LLM plan that will not die in the chat</h2>
-      <p class="meta">The chat window is usually the wrong door.</p>
+      <h2>3. AI / LLM plan</h2>
       <label class="field"><span>Subject</span><input id="sub3" type="text"></label>
       <textarea class="letter" id="body3" spellcheck="true"></textarea>
       <p>
         <button type="button" class="btn" data-copy="sub3,body3">Copy to clipboard</button>
-        <button type="button" class="btn primary" data-mail="toCompany,sub3,body3">Open your email app</button>
+        <button type="button" class="btn primary" data-mail="toCompany,sub3,body3">Open your email client</button>
       </p>
       <p class="status" data-for="body3"></p>
     </section>
     <section class="card backup">
       <h2>Warn the next person</h2>
-      <p>Public GitHub issue. No account numbers.</p>
       <p>
         <a class="btn" href="https://github.com/fevic1/stopcharge/issues/new?template=dark-pattern.md">File a cancel maze</a>
         <a class="btn" href="https://github.com/fevic1/stopcharge/issues/new?template=ai-llm.md">File an AI / LLM bill</a>
       </p>
     </section>
-    <p class="trap">We do not send the email for you. Your mail app opens with the letter in it. You pick the To address, attach files, and hit send.</p>
+    <p class="trap">We do not send the email. Your client opens with the letter. You attach files and hit send.</p>
   </main>
-  <footer>
-    <a href="terms.html">Terms</a> · Nothing you type here leaves this tab · Not legal advice
+  <footer class="sitefoot">
+    <p class="footnav">
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy (no tracking)</a>
+      <a href="templates.html">Copy-paste letters</a>
+      <a href="charges.html">Not a merchant</a>
+    </p>
+    <p>Nothing you type here leaves this tab. Public guide, not legal advice. Run by Mbio Team.</p>
+    <p>Broken path? <a href="https://github.com/fevic1/stopcharge/issues/new" target="_blank" rel="noopener">Open a GitHub issue</a>. We cannot work individual accounts.</p>
   </footer>
   <script>
   (function () {
@@ -128,17 +132,11 @@
         "\n\nThank you,\n" + name + "\n" + acct;
       $("sub2").value = "Dispute — cancelled plan, still charged " + amt + " on " + charge;
       $("body2").value =
-        "I am disputing a recurring charge.\n\n" +
-        "Merchant: " + m + "\n" +
-        "Amount: " + amt + " on " + charge + "\n" +
-        "Card ending: " + last4 + "\n\n" +
-        "I cancelled the service on " + cancel + ". They billed me after that. I already asked them for a refund. I have the cancel confirmation and the statement line.\n\n" +
-        "Please credit this charge and stop further billing from this merchant.\n\n" +
-        name;
+        "I am disputing a recurring charge.\n\nMerchant: " + m + "\nAmount: " + amt + " on " + charge + "\nCard ending: " + last4 + "\n\n" +
+        "I cancelled the service on " + cancel + ". They billed me after that. I already asked them for a refund. I have the cancel confirmation and the statement line.\n\nPlease credit this charge and stop further billing from this merchant.\n\n" + name;
       $("sub3").value = "Cancel and refund — " + plan + " still billing after I left";
       $("body3").value =
-        "Hello,\n\n" +
-        "I pay for " + plan + " with " + m + ". I cancelled on " + cancel + " through " + how + ". Confirmation: " + conf + ".\n\n" +
+        "Hello,\n\nI pay for " + plan + " with " + m + ". I cancelled on " + cancel + " through " + how + ". Confirmation: " + conf + ".\n\n" +
         "The product chat / app is not where the bill lives, which is why I am writing here. You still charged " + amt + " on " + charge + ".\n\n" +
         "Please end the plan, refund " + amt + " to the original method by " + by + ", and email me that it will not renew.\n\n" +
         "If Apple or Google is the merchant on the receipt, tell me that in one sentence so I cancel in Settings or Play Store instead of waiting on this ticket." +
@@ -164,16 +162,14 @@
     }
     function openMail(toId, subId, bodyId) {
       var to = $(toId).value.trim();
-      var sub = $(subId).value;
-      var body = $(bodyId).value;
-      var url = "mailto:" + encodeURIComponent(to) + "?subject=" + encodeURIComponent(sub) + "&body=" + encodeURIComponent(body);
+      var url = "mailto:" + encodeURIComponent(to) + "?subject=" + encodeURIComponent($(subId).value) + "&body=" + encodeURIComponent($(bodyId).value);
       if (url.length > 1800) {
-        status(bodyId, "Letter is long for a mail link. Copied instead — paste it in your email app.");
+        status(bodyId, "Letter is long for a mail link. Copied instead.");
         copyPair(subId, bodyId);
         return;
       }
       window.location.href = url;
-      status(bodyId, to ? "Your email app should open. Attach screenshots, then send." : "Email app opening with a blank To. Paste the company address.");
+      status(bodyId, to ? "Your email client should open. Attach screenshots, then send." : "Email client opening with a blank To.");
     }
     $("rebuild").addEventListener("click", build);
     document.querySelectorAll("[data-copy]").forEach(function (btn) {
