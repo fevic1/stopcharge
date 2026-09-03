@@ -5,16 +5,15 @@ Ship one page. Prefer brands people complained about in the last 48 hours on X o
 Next 14:
 1. YouTube Premium
 2. Disney+ / Hulu bundle
-3. X Premium
-4. Norton / McAfee
-5. Dropbox
-6. Microsoft 365
-7. HelloFresh / meal kit
-8. Ancestry / 23andMe
-9. Domain auto-renew (GoDaddy)
-10. VPN annual (Nord / Express)
-11. Newspaper digital (NYT / WaPo)
+3. Norton / McAfee
+4. Dropbox
+5. Microsoft 365
+6. HelloFresh / meal kit
+7. Ancestry / 23andMe
+8. Domain auto-renew (GoDaddy)
+9. VPN annual (Nord / Express)
+10. Newspaper digital (NYT / WaPo)
 
-Done recently: LinkedIn Premium, Audible, Planet Fitness
+Done recently: LinkedIn Premium, Audible, Planet Fitness, X Premium
 
 Rule: official source first. If the only path is call this number, put the number and the hours, plus the written-notice trick if the company publishes one.
