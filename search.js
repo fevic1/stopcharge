@@ -41,6 +41,7 @@
   }
 
   function applyFilter(input, grid, empty, hint) {
+    if (!input || !grid) return;
     var q = input.value;
     var qn = norm(q);
     var cards = grid.querySelectorAll("[data-name]");
@@ -50,9 +51,7 @@
       card.hidden = !ok;
       if (ok) shown += 1;
     });
-    if (empty) {
-      empty.hidden = shown !== 0;
-    }
+    if (empty) empty.hidden = cards.length === 0 || shown !== 0;
     if (hint) {
       if (looksApple(q.toLowerCase())) {
         hint.hidden = false;
@@ -80,23 +79,11 @@
 
     input.addEventListener("input", run);
     input.addEventListener("search", run);
+    run();
 
-    fetch("directory.json", { cache: "no-store" })
-      .then(function (res) { return res.ok ? res.json() : null; })
-      .then(function (data) {
-        if (!data || !data.items) return;
-        var byId = {};
-        data.items.forEach(function (item) { byId[item.id] = item; });
-        grid.querySelectorAll("[data-id]").forEach(function (card) {
-          var item = byId[card.getAttribute("data-id")];
-          if (!item) return;
-          if (item.aliases && item.aliases.length) {
-            card.setAttribute("data-aliases", item.aliases.join(" "));
-          }
-        });
-        run();
-      })
-      .catch(function () {});
+    if (window.MutationObserver) {
+      new MutationObserver(run).observe(grid, { childList: true, subtree: false });
+    }
   }
 
   if (document.readyState === "loading") {
