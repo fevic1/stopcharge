@@ -7,9 +7,10 @@
   <meta name="description" content="Official cancel paths for subscriptions that hide the exit. Evidence, refund templates, and what to do if they bill you anyway. We never charge your card.">
   <meta name="theme-color" content="#0C0C0B">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
-<link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="site.webmanifest">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="utility.css">
 </head>
 <body>
   <header>
@@ -25,161 +26,33 @@
       <div class="mark">StopCharge · run by Mbio Team</div>
     </div>
     <h1>The cancel button is never where the signup button was.</h1>
-    <p class="lede">Each page is the official path out, the fee they hope you miss, and a direct link. Fight back tools sit under that. They do not replace the cancel button. This site is a guide, not a merchant. <a href="charges.html">Not a statement charge</a>.</p>
+    <p class="lede">Each page is the official path out, the fee they hope you miss, and a direct link. This site is a guide, not a merchant. <a href="charges.html">Not a statement charge</a>.</p>
+    <div class="searchwrap">
+      <label for="exit-search">What are you trying to cancel?</label>
+      <input id="exit-search" type="search" name="q" autocomplete="off" spellcheck="false" placeholder="Netflix, Spotify, ADOBE *CREATIVE CLOUD, APPLE.COM/BILL">
+      <p id="exit-hint" hidden></p>
+    </div>
   </header>
   <main>
-    <div class="grid">
-      <article class="card">
-        <h2><a href="pages/amazon-prime.html">Amazon Prime</a></h2>
-        <p class="meta">No cancel fee · refund window is short</p>
-        <p><a href="https://www.amazon.com/gp/primecentral" rel="noopener">Open Prime Central</a>. Then End membership.</p>
-      </article>
-      <article class="card">
-        <h2><a href="pages/amazon-music.html">Amazon Music</a></h2>
-        <p class="meta">Unlimited is a separate bill from Prime</p>
-        <p><a href="https://music.amazon.com/settings" rel="noopener">Open Music settings</a>. Cancel under Subscription Renewal. Prime music dies only with Prime.</p>
-      </article>
-      <article class="card">
-        <h2><a href="pages/netflix.html">Netflix</a></h2>
-        <p class="meta">Deleting the app does not cancel</p>
-        <p><a href="https://www.netflix.com/cancelplan" rel="noopener">Open cancel plan</a>. Finish Cancellation. Billed by a partner? Use Apple or Play.</p>
-      </article>
-      <article class="card">
-        <h2><a href="pages/disney-plus.html">Disney Plus</a></h2>
-        <p class="meta">Web cancel · bundles keep billing</p>
-        <p><a href="https://www.disneyplus.com/account" rel="noopener">Open account</a>. Profile, Account, Cancel Subscription. Partner billed? Apple or Play.</p>
-      </article>
-      <article class="card">
-        <h2><a href="pages/hulu.html">Hulu</a></h2>
-        <p class="meta">Pause is not cancel</p>
-        <p><a href="https://secure.hulu.com/account" rel="noopener">Open Hulu account</a>. Cancel, then Continue to Cancel. Next Charge means it is still live.</p>
-      </article>
-      <article class="card">
-        <h2><a href="pages/max.html">Max</a></h2>
-        <p class="meta">Max and HBO Max are the same bill</p>
-        <p><a href="https://www.max.com/subscription" rel="noopener">Open Max subscription</a>. No Cancel button means a partner owns the receipt.</p>
-      </article>
-      <article class="card">
-        <h2><a href="pages/paramount-plus.html">Paramount Plus</a></h2>
-        <p class="meta">TV app often cannot cancel</p>
-        <p><a href="https://www.paramountplus.com/account" rel="noopener">Open account</a>. Cancel subscription. Carrier and store bills hide the button.</p>
-      </article>
-      <article class="card">
-        <h2><a href="pages/peacock.html">Peacock</a></h2>
-        <p class="meta">No pause · unused days often stay billed</p>
-        <p><a href="https://www.peacocktv.com/account" rel="noopener">Open Peacock account</a>. Plans and Payments, then Cancel Plan.</p>
-      </article>
-      <article class="card">
-        <h2><a href="pages/apple-tv-plus.html">Apple TV Plus</a></h2>
-        <p class="meta">The TV app cannot cancel</p>
-        <p>Settings, your name, Subscriptions. Desktop: <a href="https://apps.apple.com/account/subscriptions" rel="noopener">Apple subscriptions</a>.</p>
-      </article>
-      <article class="card">
-        <h2><a href="pages/spotify-premium.html">Spotify Premium</a></h2>
-        <p class="meta">Often web only · partner plans hide Cancel</p>
-        <p><a href="https://www.spotify.com/account/subscription/" rel="noopener">Open your plan</a>. Cancel Premium. Family members cannot kill the manager’s bill.</p>
-      </article>
-      <article class="card">
-        <h2><a href="pages/youtube-premium.html">YouTube Premium</a></h2>
-        <p class="meta">YouTube, Play, or Apple. Match the receipt</p>
-        <p><a href="https://www.youtube.com/paid_memberships" rel="noopener">Open paid memberships</a>. iOS signup dies in Settings.</p>
-      </article>
-      <article class="card">
-        <h2><a href="pages/x-premium.html">X Premium</a></h2>
-        <p class="meta">Cancel on the platform you used · no refund for time paid</p>
-        <p><a href="https://help.x.com/en/using-x/x-premium-faq" rel="noopener">Official FAQ</a>. Web → Premium → Manage. Apple or Play receipt? Cancel there.</p>
-      </article>
-      <article class="card">
-        <h2><a href="pages/adobe-creative-cloud.html">Adobe Creative Cloud</a></h2>
-        <p class="meta">Annual plans can charge a fee after day 14</p>
-        <p><a href="https://account.adobe.com/plans" rel="noopener">Open Adobe Plans</a>. Manage plan → Cancel your plan.</p>
-      </article>
-      <article class="card">
-        <h2><a href="pages/microsoft-365.html">Microsoft 365</a></h2>
-        <p class="meta">Apps cannot cancel · storage drops after</p>
-        <p><a href="https://account.microsoft.com/services/microsoft365" rel="noopener">Open Microsoft 365 services</a>. Cancel subscription. Copy OneDrive files out first.</p>
-      </article>
-      <article class="card">
-        <h2><a href="pages/dropbox.html">Dropbox</a></h2>
-        <p class="meta">Cancel plan is a downgrade, not delete</p>
-        <p><a href="https://www.dropbox.com/account" rel="noopener">Open Dropbox account</a>. Cancel plan. Files above the free limit can lock.</p>
-      </article>
-      <article class="card">
-        <h2><a href="pages/chatgpt-plus.html">ChatGPT Plus</a></h2>
-        <p class="meta">Chat window cannot cancel</p>
-        <p><a href="https://chatgpt.com/#settings" rel="noopener">Open Settings, Billing</a>. Apple or Play receipt? Cancel there.</p>
-      </article>
-      <article class="card">
-        <h2><a href="pages/canva-pro.html">Canva Pro</a></h2>
-        <p class="meta">App uninstall does not cancel · team members cannot</p>
-        <p><a href="https://www.canva.com/settings/billing" rel="noopener">Open Canva billing</a>. Cancel plan. Apple or Play receipt? Cancel there.</p>
-      </article>
-      <article class="card">
-        <h2><a href="pages/apple-subscriptions.html">Anything billed by Apple</a></h2>
-        <p class="meta">The app cannot cancel itself</p>
-        <p class="trap">Before a bank chargeback, try <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>. Apple often grants a one time courtesy refund. A bank dispute can risk the Apple ID.</p>
-        <p>Phone: Settings → your name → Subscriptions.<br>
-        Desktop: <a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener">Apple subscriptions</a>
-        or <a href="https://www.apple.com/billing" target="_blank" rel="noopener">apple.com/billing</a>.</p>
-      </article>
-      <article class="card">
-        <h2><a href="pages/google-play-subscriptions.html">Anything billed by Google Play</a></h2>
-        <p class="meta">The app is the wrong door</p>
-        <p><a href="https://play.google.com/store/account/subscriptions" rel="noopener">Open Play subscriptions</a>.</p>
-      </article>
-      <article class="card">
-        <h2><a href="pages/linkedin-premium.html">LinkedIn Premium</a></h2>
-        <p class="meta">No cancel fee · keep benefits until cycle ends</p>
-        <p>Me → Premium features → Manage subscription → Cancel. Apple or Google billed? Cancel there.</p>
-      </article>
-      <article class="card">
-        <h2><a href="pages/audible.html">Audible</a></h2>
-        <p class="meta">App will not cancel · credits expire</p>
-        <p>audible.com → Account details → Cancel membership. Finish every retention screen. Apple/Play billed? Cancel there.</p>
-      </article>
-      <article class="card">
-        <h2><a href="pages/planet-fitness.html">Planet Fitness</a></h2>
-        <p class="meta">Home club · letter or in person for most</p>
-        <p>Try online first, then visit home club or certified mail. Notice by the 10th. Possible $58 buyout.</p>
-      </article>
-    </div>
-
+    <div class="grid" id="exit-grid"></div>
+    <p id="exit-empty" class="card" hidden>No match in this directory. If the statement says Apple, iTunes, or App Store, use the Apple page. If it says Google Play, use the Play page.</p>
+    <noscript><p class="trap">Turn on JavaScript to search the directory, or open a brand page from the address bar under /pages/.</p></noscript>
     <section class="card backup">
       <h2>They charged you anyway</h2>
-      <p>Cancel first. Three screenshots. Then <strong>open your email client</strong>. Not a GitHub form, not a message to us.</p>
-      <ol>
-        <li>The <strong>active plan</strong> screen before you cancel.</li>
-        <li>The <strong>cancellation confirmed</strong> screen with date and time.</li>
-        <li>The confirmation <strong>email</strong> saved as a file.</li>
+      <ol class="ladder">
+        <li><span class="n">1</span> Cancel on the official path first.</li>
+        <li><span class="n">2</span> Save three proofs: active plan, cancel confirmed, confirmation email file.</li>
+        <li><span class="n">3</span> Write the merchant from your own inbox.</li>
+        <li><span class="n">4</span> Ask for a refund. That is a request, not a guarantee.</li>
+        <li><span class="n">5</span> If they ignore you, use the card app or PayPal. Your issuer’s rules control the window.</li>
+        <li><span class="n">6</span> Still stuck: a consumer-protection desk in your country.</li>
       </ol>
-      <p class="trap">Act fast: card disputes often die after <strong>120 days</strong>. PayPal often <strong>180</strong>. Escalate inside 20 days.</p>
+      <p class="trap">Many US card networks use a roughly <strong>120-day</strong> window. PayPal’s published window is often longer, and some PayPal cases need an escalate inside about <strong>20 days</strong>. Check the form in your bank or PayPal app.</p>
       <p>
         <a class="btn primary" href="templates.html">Copy letter or open your email client</a>
         <a class="btn" href="fight.html">Full fight back guide</a>
       </p>
-      <details>
-        <summary>Letter to the company</summary>
-        <pre>Subject: Refund. I cancelled, you charged me anyway
-
-I cancelled [plan] on [date] through [website / Apple / Play]. I have the confirmation.
-You still charged [amount] on [charge date]. Please refund that to the original payment method within 5 business days and confirm the plan will not renew.
-
-I can send the three screenshots. If this stays unpaid I will dispute the charge with my bank.
-
-[Name]
-[Email already on the account]</pre>
-      </details>
-      <details>
-        <summary>Reason for the bank app</summary>
-        <pre>Reason: cancelled recurring charge / services not received after cancel.
-
-I cancelled [merchant / plan] on [cancel date] before this cycle.
-They still took [amount] on [charge date]. I already asked them in writing for a refund.
-Please credit this charge and stop further billing from this merchant.
-Attached: active plan screenshot, cancel confirmed screenshot, confirmation email, my refund demand.</pre>
-      </details>
     </section>
-
     <section class="card">
       <h2>If they ignore the letter</h2>
       <ul>
@@ -189,25 +62,11 @@ Attached: active plan screenshot, cancel confirmed screenshot, confirmation emai
         <li>Thailand: <a href="https://www.ocpb.go.th" rel="noopener">OCPB</a></li>
       </ul>
     </section>
-
     <section class="card backup">
       <h2>Stop the next charge</h2>
       <p>Lock a virtual card and freeze it. <a href="https://privacy.com" rel="noopener">Privacy.com</a> is US only. Elsewhere: Revolut, Wise, or your bank.</p>
     </section>
-    <section class="card">
-      <h2>AI / LLM plans</h2>
-      <p>Cancel on the billing page. The chat window is usually the wrong door. Apple or Play receipt? Use those pages instead.</p>
-      <ul>
-        <li><a href="pages/chatgpt-plus.html">ChatGPT Plus</a></li>
-        <li><a href="https://claude.ai/settings" rel="noopener">Claude settings</a></li>
-        <li><a href="https://one.google.com" rel="noopener">Gemini / Google One</a></li>
-        <li><a href="https://github.com/settings/billing" rel="noopener">GitHub Copilot billing</a></li>
-        <li><a href="https://www.cursor.com/settings" rel="noopener">Cursor settings</a></li>
-        <li><a href="https://www.midjourney.com/account/" rel="noopener">Midjourney account</a></li>
-      </ul>
-    </section>
-    <p class="meta">Want the maze on the public record?
-      <a href="https://github.com/fevic1/stopcharge/issues/new?template=dark-pattern.md&title=Cancel+maze:+[company]" target="_blank" rel="noopener">File an optional GitHub report</a>. No card numbers.</p>
+    <p class="meta">Found an outdated link? <a href="https://github.com/fevic1/stopcharge/issues/new" target="_blank" rel="noopener">Report it on GitHub</a> (account may be required) or email hello@stopcharge.net with the page URL only. No card numbers.</p>
   </main>
   <footer class="sitefoot">
     <p class="footnav">
@@ -217,26 +76,43 @@ Attached: active plan screenshot, cancel confirmed screenshot, confirmation emai
       <a href="charges.html">Not a merchant</a>
     </p>
     <p>This site is a public guide, not legal advice. Always check the live merchant page. Run by Mbio Team.</p>
-    <p>Found a broken path? <a href="https://github.com/fevic1/stopcharge/issues/new" target="_blank" rel="noopener">Open a GitHub issue</a>. We cannot work individual accounts. Use the letters and the merchant’s billing page.</p>
   </footer>
+  <script src="search.js"></script>
   <script>
-  document.querySelectorAll("pre").forEach(function (pre) {
-    pre.style.position = "relative";
-    var button = document.createElement("button");
-    button.type = "button";
-    button.className = "copy-btn";
-    button.textContent = "Copy";
-    button.addEventListener("click", function () {
-      var text = pre.innerText.replace(/\s*Copy\s*$/, "").replace(/\s*Copied\s*$/, "");
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(text.trim()).then(function () {
-          button.textContent = "Copied";
-          setTimeout(function () { button.textContent = "Copy"; }, 2000);
-        });
-      }
-    });
-    pre.appendChild(button);
-  });
+  (function () {
+    var grid = document.getElementById("exit-grid");
+    if (!grid) return;
+    function card(item) {
+      var brand = item.name.replace(/ Plus$/, "").replace(/^Anything billed by /, "");
+      var el = document.createElement("article");
+      el.className = "card";
+      el.setAttribute("data-id", item.id);
+      el.setAttribute("data-name", item.name);
+      el.setAttribute("data-billed", item.billedBy || "merchant");
+      el.setAttribute("data-aliases", (item.aliases || []).join(" "));
+      var verified = item.verified ? item.verified.replace(/^(\d{4})-(\d{2})-(\d{2})$/, function (_, y, m, d) {
+        var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+        return d.replace(/^0/, "") + " " + months[parseInt(m, 10) - 1] + " " + y;
+      }) : "";
+      el.innerHTML =
+        "<p class=\"indie\">Independent guide \u00b7 not affiliated with " + brand + "</p>" +
+        "<h2><a href=\"" + item.slug + "\">" + item.name + "</a></h2>" +
+        (verified ? "<p class=\"verified\">Last verified " + verified + "</p>" : "") +
+        "<p class=\"meta\">" + (item.feeNote || "") + "</p>" +
+        "<p><a href=\"" + item.cancelUrl + "\" rel=\"noopener\">" + (item.cancelLabel || "Open official cancel") + "</a>. " + (item.hint || "") + "</p>";
+      return el;
+    }
+    function paint(items) {
+      grid.innerHTML = "";
+      items.forEach(function (item) { grid.appendChild(card(item)); });
+    }
+    fetch("directory.json", { cache: "no-store" })
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        if (data && data.items) paint(data.items);
+      })
+      .catch(function () {});
+  })();
   </script>
 </body>
 </html>
