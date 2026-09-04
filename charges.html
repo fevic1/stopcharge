@@ -6,6 +6,7 @@
   <title>Unrecognized bank charges. StopCharge is not the merchant</title>
   <meta name="description" content="stopcharge.net is not a payment processor. How third party descriptors work and how to identify a real charge.">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="utility.css">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
 <body>
@@ -18,12 +19,51 @@
     </nav>
     <div class="mark">StopCharge · Mbio Team</div>
     <h1>Unrecognized charges, processors, and this site</h1>
-    <p class="lede">stopcharge.net never bills a card. Match the merchant string on the statement to Apple, Play, PayPal, or the brand.</p>
+    <p class="lede">stopcharge.net never bills a card. Match the merchant string on the statement to Apple, Play, PayPal, or the brand. Matching stays in your browser.</p>
   </header>
   <main>
     <section class="card backup" id="not-billing">
       <h2>This site’s role</h2>
-      <p>Not a merchant, billing descriptor, or processor. No lookup box. No checkout.</p>
+      <p>Not a merchant, billing descriptor, or processor. No account. No charge lookup that leaves this page.</p>
+    </section>
+    <section class="card" id="match">
+      <h2>Don’t recognize the line?</h2>
+      <p>Paste the merchant name exactly as it appears on the statement.</p>
+      <div class="searchwrap">
+        <label for="exit-search">Statement descriptor</label>
+        <input id="exit-search" type="search" name="q" autocomplete="off" spellcheck="false" placeholder="ADOBE *CREATIVE CLOUD">
+        <p id="exit-hint" hidden></p>
+      </div>
+      <div class="grid" id="exit-grid">
+        <article class="card" data-id="apple-subscriptions" data-name="Anything billed by Apple" data-billed="apple" data-aliases="APPLE.COM/BILL ITUNES.COM/BILL APP STORE ITUNES APPLE BILL">
+          <p class="indie">Independent guide · not affiliated with Apple</p>
+          <h2><a href="pages/apple-subscriptions.html">Anything billed by Apple</a></h2>
+          <p>Settings → Subscriptions, or reportaproblem.apple.com before a bank fight.</p>
+        </article>
+        <article class="card" data-id="google-play-subscriptions" data-name="Anything billed by Google Play" data-billed="play" data-aliases="GOOGLE * GOOGLE PLAY GOOGLEPLAY PLAYSTORE">
+          <p class="indie">Independent guide · not affiliated with Google</p>
+          <h2><a href="pages/google-play-subscriptions.html">Anything billed by Google Play</a></h2>
+          <p>Cancel in Play subscriptions, not inside the app.</p>
+        </article>
+        <article class="card" data-id="adobe-creative-cloud" data-name="Adobe Creative Cloud" data-billed="merchant" data-aliases="ADOBE *CREATIVE CLOUD ADOBE CREATIVE CLOUD ADOBE.COM">
+          <p class="indie">Independent guide · not affiliated with Adobe</p>
+          <h2><a href="pages/adobe-creative-cloud.html">Adobe Creative Cloud</a></h2>
+          <p>If subscribed through Apple or Google, cancel there instead.</p>
+        </article>
+        <article class="card" data-id="netflix" data-name="Netflix" data-billed="merchant" data-aliases="NETFLIX.COM NFLX">
+          <p class="indie">Independent guide · not affiliated with Netflix</p>
+          <h2><a href="pages/netflix.html">Netflix</a></h2>
+        </article>
+        <article class="card" data-id="spotify-premium" data-name="Spotify Premium" data-billed="merchant" data-aliases="SPOTIFY SPOTIFY P">
+          <p class="indie">Independent guide · not affiliated with Spotify</p>
+          <h2><a href="pages/spotify-premium.html">Spotify Premium</a></h2>
+        </article>
+        <article class="card" data-id="amazon-prime" data-name="Amazon Prime" data-billed="merchant" data-aliases="AMAZON PRIME AMZN PRIME">
+          <p class="indie">Independent guide · not affiliated with Amazon</p>
+          <h2><a href="pages/amazon-prime.html">Amazon Prime</a></h2>
+        </article>
+      </div>
+      <p id="exit-empty" hidden>No exact match here. Use the <a href="index.html">full directory</a>. If Apple or Play owns the receipt, cancel on that platform.</p>
     </section>
     <section class="card" id="processors">
       <h2>Third party processors</h2>
@@ -46,7 +86,8 @@
       <a href="charges.html">Not a merchant</a>
     </p>
     <p>Public guide, not legal advice. Run by Mbio Team.</p>
-    <p>Broken path? <a href="https://github.com/fevic1/stopcharge/issues/new" target="_blank" rel="noopener">Open a GitHub issue</a>. We cannot work individual accounts.</p>
+    <p>Found an outdated link? <a href="https://github.com/fevic1/stopcharge/issues/new" target="_blank" rel="noopener">Report it on GitHub</a> (account may be required). We cannot work individual accounts.</p>
   </footer>
+  <script src="search.js"></script>
 </body>
 </html>
