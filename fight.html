@@ -7,6 +7,7 @@
   <meta name="description" content="How a subscription dispute works: cancel first, evidence packet, merchant letter, then the issuer. Typical windows and Apple warning. Not legal advice.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="utility.css">
 </head>
 <body>
   <header>
@@ -31,10 +32,9 @@
       <p>Recurring digital plans almost always land in “canceled but still billed” or “services not received after cancel.” Those codes fail when the only story is “I closed the app.”</p>
       <p>Visa, Mastercard, American Express, and Discover each publish reason codes and time limits. Typical consumer windows sit around 120 days from the charge, or from the date the service should have stopped. PayPal’s Resolution Center is often about 180 days, and the case can close if you do not escalate inside about 20 days. A US billing error letter under the Fair Credit Billing Act is generally 60 days from the statement that first showed the error. Those numbers are typical, not a promise. The issuer’s own form is the rule that applies to that card.</p>
     </section>
-
     <section class="card">
       <h2>Order. Do not skip a step</h2>
-      <ol>
+      <ol class="ladder">
         <li>Cancel on the <a href="index.html">official path</a> for that brand. Apple billed plans die in Settings or <a href="https://www.apple.com/billing" rel="noopener">apple.com/billing</a>. Play billed plans die in <a href="https://play.google.com/store/account/subscriptions" rel="noopener">Play subscriptions</a>.</li>
         <li>Save the three files before you close the tab.</li>
         <li>If the statement says Apple, iTunes, or App Store: use <a href="https://reportaproblem.apple.com" rel="noopener">reportaproblem.apple.com</a> before any bank dispute.</li>
@@ -44,7 +44,6 @@
       </ol>
       <p>Issuers ask whether you canceled with the merchant. A first strike at the bank, with no cancel proof, is why most of these cases lose.</p>
     </section>
-
     <section class="card">
       <h2>The evidence packet</h2>
       <p>Banks do not want a novel. They want a short chain a reviewer can check in two minutes.</p>
@@ -58,7 +57,6 @@
       </ol>
       <p>Without the first three items the file is a story. The merchant’s reply will show an active plan and no cancel timestamp. The issuer then sides with the merchant.</p>
     </section>
-
     <section class="card">
       <h2>Windows (typical, not a promise)</h2>
       <ul>
@@ -67,27 +65,23 @@
         <li><strong>PayPal:</strong> often <strong>180 days</strong>. Escalate inside <strong>20 days</strong>.</li>
         <li><strong>Apple Report a Problem:</strong> recent charges on that Apple ID. Status often 24 to 48 hours.</li>
       </ul>
-      <p>Card networks set floors. The issuer can be stricter. Some banks want the merchant letter first. Some will take screenshots only. Some reject a recurring billing dispute filed after you kept using the service for another cycle. Read the form in your bank app. That form is the policy that applies to you.</p>
+      <p>Card networks set floors. The issuer can be stricter. Read the form in your bank app. That form is the policy that applies to you.</p>
     </section>
-
     <section class="card backup">
       <h2>What to tell the bank</h2>
       <p>Reason: canceled recurring charge, or services not received after cancel.</p>
       <p>Three sentences: what you bought, when you canceled, that they billed after that date. Attach the packet. Ask for a case number.</p>
       <p><a href="templates.html">Copy the bank text and the merchant letter</a>.</p>
     </section>
-
     <section class="card backup">
       <h2>Apple billed plans</h2>
-      <p>Skip the bank until Report a Problem has an answer. A chargeback against Apple can freeze the Apple ID until the balance is treated as unpaid. Apple often grants a one time courtesy refund on that form.</p>
+      <p>Skip the bank until Report a Problem has an answer. A chargeback against Apple can freeze the Apple ID until the balance is treated as unpaid. Apple sometimes issues a goodwill refund on that form. Not guaranteed. A bank dispute can affect the Apple ID.</p>
       <p><a href="https://reportaproblem.apple.com" rel="noopener">reportaproblem.apple.com</a> · <a href="pages/apple-subscriptions.html">Anything billed by Apple</a></p>
     </section>
-
     <section class="card backup">
       <h2>Stop the next charge</h2>
-      <p>Lock a virtual card and freeze it. <a href="https://privacy.com" rel="noopener">Privacy.com</a> is US only. Elsewhere: Revolut, Wise, or your bank. Some banks let you replace the plastic and opt out of card updater networks so the old merchant cannot follow the new number.</p>
+      <p>Lock a virtual card and freeze it. <a href="https://privacy.com" rel="noopener">Privacy.com</a> is US only. Elsewhere: Revolut, Wise, or your bank.</p>
     </section>
-
     <section class="card">
       <h2>If they ignore the letter</h2>
       <ul>
@@ -97,13 +91,11 @@
         <li>Thailand: <a href="https://www.ocpb.go.th" rel="noopener">OCPB</a></li>
       </ul>
     </section>
-
     <section class="card">
       <h2>What this page is not</h2>
-      <p>We do not file the dispute for you. We do not store your dates or card numbers. We do not recite a live Visa reason code manual. That text goes stale and would read like legal advice.</p>
-      <p>The directory is the cancel map. This page is the evidence spec. The letters are the payload. The bank is a process with a deadline. If the packet is complete inside the window, you have a case. If it is not, extra wording on this site will not save it.</p>
+      <p>We do not file the dispute for you. We do not store your dates or card numbers. We do not recite a live Visa reason code manual.</p>
+      <p>The directory is the cancel map. This page is the evidence spec. The letters are the payload.</p>
     </section>
-
     <p>
       <a class="btn primary" href="templates.html">Copy letter or open your email client</a>
       <a class="btn" href="index.html">Official cancel paths</a>
@@ -117,7 +109,7 @@
       <a href="charges.html">Not a merchant</a>
     </p>
     <p>Public guide, not legal advice. Rules differ by country, card, and plan. Run by Mbio Team.</p>
-    <p>Broken path? <a href="https://github.com/fevic1/stopcharge/issues/new" target="_blank" rel="noopener">Open a GitHub issue</a>. We cannot work individual accounts.</p>
+    <p>Found an outdated link? <a href="https://github.com/fevic1/stopcharge/issues/new" target="_blank" rel="noopener">Report it on GitHub</a> (account may be required). We cannot work individual accounts.</p>
   </footer>
 </body>
 </html>
