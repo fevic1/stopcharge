@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-04",
+  "updated": "2026-09-05",
   "note": "Client-side directory only. Aliases are common statement strings, not a charge lookup.",
   "items": [
     {"id": "amazon-prime", "name": "Amazon Prime", "slug": "pages/amazon-prime.html", "verified": "2026-09-04", "feeNote": "No cancel fee \u00b7 refund window is short", "cancelUrl": "https://www.amazon.com/gp/primecentral", "cancelLabel": "Open Prime Central", "hint": "Then End membership.", "billedBy": "merchant", "aliases": ["AMAZON PRIME", "AMZN PRIME", "AMAZON.COM", "AMAZON DIGITAL", "PRIME VIDEO"]},
@@ -24,6 +24,7 @@
     {"id": "linkedin-premium", "name": "LinkedIn Premium", "slug": "pages/linkedin-premium.html", "verified": "2026-09-04", "feeNote": "No cancel fee \u00b7 keep benefits until cycle ends", "cancelUrl": "pages/linkedin-premium.html", "cancelLabel": "Open guide", "hint": "Me, Premium features, Manage subscription, Cancel.", "billedBy": "merchant", "aliases": ["LINKEDIN", "LINKEDIN PREM", "LINKEDIN.COM"]},
     {"id": "audible", "name": "Audible", "slug": "pages/audible.html", "verified": "2026-09-04", "feeNote": "App will not cancel \u00b7 credits expire", "cancelUrl": "pages/audible.html", "cancelLabel": "Open guide", "hint": "audible.com, Account details, Cancel membership. Finish every retention screen.", "billedBy": "merchant", "aliases": ["AUDIBLE", "AUDIBLE.COM", "AMZN AUDIBLE"]},
     {"id": "planet-fitness", "name": "Planet Fitness", "slug": "pages/planet-fitness.html", "verified": "2026-09-04", "feeNote": "Home club \u00b7 letter or in person for most", "cancelUrl": "pages/planet-fitness.html", "cancelLabel": "Open guide", "hint": "Try online first, then visit home club or certified mail. Notice by the 10th.", "billedBy": "merchant", "aliases": ["PLANET FITNESS", "PLA FIT", "PLANET FIT"]},
-    {"id": "norton", "name": "Norton", "slug": "pages/norton.html", "verified": "2026-09-04", "feeNote": "Uninstall does not cancel · retention offers", "cancelUrl": "https://my.norton.com/extspa/account/subscriptions", "cancelLabel": "Open My Subscriptions", "hint": "Cancel Subscription Renewal → Unsubscribe → No thanks, cancel.", "billedBy": "merchant", "aliases": ["NORTON", "NORTON *", "NORTONLIFELOCK", "GEN DIGITAL", "LIFELOCK", "SYMANTEC"]}
+    {"id": "norton", "name": "Norton", "slug": "pages/norton.html", "verified": "2026-09-04", "feeNote": "Uninstall does not cancel · retention offers", "cancelUrl": "https://my.norton.com/extspa/account/subscriptions", "cancelLabel": "Open My Subscriptions", "hint": "Cancel Subscription Renewal → Unsubscribe → No thanks, cancel.", "billedBy": "merchant", "aliases": ["NORTON", "NORTON *", "NORTONLIFELOCK", "GEN DIGITAL", "LIFELOCK", "SYMANTEC"]},
+    {"id": "hellofresh", "name": "HelloFresh", "slug": "pages/hellofresh.html", "verified": "2026-09-05", "feeNote": "5-day cutoff · skip is not cancel", "cancelUrl": "https://www.hellofresh.com/", "cancelLabel": "Open HelloFresh", "hint": "Account Settings → Cancel Plan. Decline pause offers.", "billedBy": "merchant", "aliases": ["HELLOFRESH", "HELLO FRESH", "HF", "HELLOFRESH.COM"]}
   ]
 }
