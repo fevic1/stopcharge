@@ -6,14 +6,14 @@ When adding or rechecking a page, bump `verified` in directory.json and the page
 Re-verify if Last verified is older than 45 days.
 
 Next:
-1. Ancestry / 23andMe
-2. Domain auto-renew (GoDaddy)
-3. VPN annual (Nord / Express)
-4. Newspaper digital (NYT / WaPo)
-5. McAfee
+1. Domain auto-renew (GoDaddy)
+2. VPN annual (Nord / Express)
+3. Newspaper digital (NYT / WaPo)
+4. McAfee
+5. 23andMe (separate from Ancestry)
 6. Finish page-template pass on remaining merchant HTML (amazon-music, apple-subscriptions, audible, canva, chatgpt, disney, dropbox, hulu, max, microsoft, paramount, peacock, planet-fitness, x-premium)
 
-Already live: YouTube Premium, Disney+, Dropbox, Microsoft 365, LinkedIn Premium, Audible, Planet Fitness, X Premium, Netflix, Adobe, Amazon Prime, Spotify, Play, Apple TV+, Norton, HelloFresh
+Already live: YouTube Premium, Disney+, Dropbox, Microsoft 365, LinkedIn Premium, Audible, Planet Fitness, X Premium, Netflix, Adobe, Amazon Prime, Spotify, Play, Apple TV+, Norton, HelloFresh, Ancestry
 
 Rule: official source first. If the only path is call this number, put the number and the hours, plus the written-notice trick if the company publishes one.
 Also write aliases (statement strings) into directory.json for the new page.
