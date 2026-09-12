@@ -152,6 +152,34 @@ nav a { margin-right: 14px; font-size: 14px; }
 @media (min-width: 720px) {
   .grid { grid-template-columns: 1fr 1fr; }
 }
+.desks {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px 20px;
+  margin: 12px 0 0;
+}
+.desks h3 {
+  margin: 0 0 6px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sage);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+.desks ul {
+  margin: 0;
+  padding-left: 18px;
+}
+.desks li {
+  margin: 4px 0;
+  font-size: 14px;
+}
+@media (min-width: 640px) {
+  .desks { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 900px) {
+  .desks { grid-template-columns: 1fr 1fr 1fr 1fr; }
+}
 label.field {
   display: block;
   margin: 10px 0;
