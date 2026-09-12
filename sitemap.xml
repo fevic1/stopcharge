@@ -1,18 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://stopcharge.net/</loc></url>
-  <url><loc>https://stopcharge.net/cancel/</loc></url>
   <url><loc>https://stopcharge.net/templates.html</loc></url>
   <url><loc>https://stopcharge.net/fight.html</loc></url>
   <url><loc>https://stopcharge.net/charges.html</loc></url>
-  <url><loc>https://stopcharge.net/cancel/netflix</loc></url>
-  <url><loc>https://stopcharge.net/cancel/spotify</loc></url>
-  <url><loc>https://stopcharge.net/cancel/disney-plus</loc></url>
-  <url><loc>https://stopcharge.net/cancel/hulu</loc></url>
-  <url><loc>https://stopcharge.net/cancel/max</loc></url>
-  <url><loc>https://stopcharge.net/cancel/adobe</loc></url>
-  <url><loc>https://stopcharge.net/cancel/apple</loc></url>
-  <url><loc>https://stopcharge.net/cancel/play</loc></url>
-  <url><loc>https://stopcharge.net/cancel/chatgpt</loc></url>
-  <url><loc>https://stopcharge.net/cancel/canva</loc></url>
+  <url><loc>https://stopcharge.net/privacy.html</loc></url>
+  <url><loc>https://stopcharge.net/terms.html</loc></url>
+  <url><loc>https://stopcharge.net/complain.html</loc></url>
+  <url><loc>https://stopcharge.net/cancel/</loc></url>
+  <url><loc>https://stopcharge.net/pages/netflix.html</loc></url>
+  <url><loc>https://stopcharge.net/pages/spotify-premium.html</loc></url>
+  <url><loc>https://stopcharge.net/pages/disney-plus.html</loc></url>
+  <url><loc>https://stopcharge.net/pages/hulu.html</loc></url>
+  <url><loc>https://stopcharge.net/pages/max.html</loc></url>
+  <url><loc>https://stopcharge.net/pages/paramount-plus.html</loc></url>
+  <url><loc>https://stopcharge.net/pages/peacock.html</loc></url>
+  <url><loc>https://stopcharge.net/pages/apple-tv-plus.html</loc></url>
+  <url><loc>https://stopcharge.net/pages/apple-subscriptions.html</loc></url>
+  <url><loc>https://stopcharge.net/pages/google-play-subscriptions.html</loc></url>
+  <url><loc>https://stopcharge.net/pages/amazon-prime.html</loc></url>
+  <url><loc>https://stopcharge.net/pages/amazon-music.html</loc></url>
+  <url><loc>https://stopcharge.net/pages/youtube-premium.html</loc></url>
+  <url><loc>https://stopcharge.net/pages/adobe-creative-cloud.html</loc></url>
+  <url><loc>https://stopcharge.net/pages/microsoft-365.html</loc></url>
+  <url><loc>https://stopcharge.net/pages/dropbox.html</loc></url>
+  <url><loc>https://stopcharge.net/pages/canva-pro.html</loc></url>
+  <url><loc>https://stopcharge.net/pages/chatgpt-plus.html</loc></url>
+  <url><loc>https://stopcharge.net/pages/audible.html</loc></url>
+  <url><loc>https://stopcharge.net/pages/linkedin-premium.html</loc></url>
+  <url><loc>https://stopcharge.net/pages/x-premium.html</loc></url>
+  <url><loc>https://stopcharge.net/pages/hellofresh.html</loc></url>
+  <url><loc>https://stopcharge.net/pages/norton.html</loc></url>
+  <url><loc>https://stopcharge.net/pages/godaddy.html</loc></url>
+  <url><loc>https://stopcharge.net/pages/ancestry.html</loc></url>
+  <url><loc>https://stopcharge.net/pages/planet-fitness.html</loc></url>
 </urlset>
