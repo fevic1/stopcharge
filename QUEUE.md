@@ -8,7 +8,9 @@ Re-verify if Last verified is older than 45 days.
 Next:
 1. Finish page-template pass on remaining merchant HTML (amazon-music, apple-subscriptions, audible, canva, chatgpt, disney, dropbox, hulu, max, microsoft, paramount, peacock, planet-fitness, x-premium)
 
-Already live: YouTube Premium, Disney+, Dropbox, Microsoft 365, LinkedIn Premium, Audible, Planet Fitness, X Premium, Netflix, Adobe, Amazon Prime, Spotify, Play, Apple TV+, Norton, HelloFresh, Ancestry, GoDaddy, NordVPN, ExpressVPN, New York Times, Washington Post, McAfee, 23andMe, Crunchyroll
+Already live: YouTube Premium, Disney+, Dropbox, Microsoft 365, LinkedIn Premium, Audible, Planet Fitness, X Premium, Netflix, Adobe, Amazon Prime, Spotify, Play, Apple TV+, Norton, HelloFresh, Ancestry, GoDaddy, NordVPN, ExpressVPN, New York Times, Washington Post, McAfee, 23andMe, Crunchyroll, MyHeritage
+
+Shipped 30 Sep 2026: MyHeritage (fresh X complaint: relative cannot log in / needs human cancel). Official source: MyHeritage help “How can I cancel the automatic renewal of a subscription?”
 
 Rule: official source first. If the only path is call this number, put the number and the hours, plus the written-notice trick if the company publishes one.
 Also write aliases (statement strings) into directory.json for the new page.
